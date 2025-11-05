@@ -15,26 +15,20 @@ export function Page7Section() {
     { name: "Previdenciário", highlight: true },
     { name: "Cível", highlight: true },
     { name: "Trabalhista", highlight: true },
-    { name: "Empresarial", highlight: false },
     { name: "Penal", highlight: false },
-    { name: "Tributário", highlight: false },
     { name: "Administrativo", highlight: false },
-    { name: "Constitucional", highlight: false },
-    { name: "Ambiental e Urbanístico", highlight: false },
-    { name: "Internacional", highlight: false },
-    { name: "Digital e da Inovação", highlight: false },
-    { name: "Consumidor", highlight: false },
+    { name: "Imobiliário", highlight: false },
     { name: "Família", highlight: false },
-    { name: "Imobiliário", highlight: false }
+    { name: "Societário", highlight: false }
   ]
 
   return (
     <section
       id="page7"
-      className="h-screen bg-freelaw-bg flex items-center justify-center px-4 relative overflow-hidden"
+      className="min-h-screen bg-freelaw-bg flex items-center justify-center px-4 py-20 relative overflow-hidden"
     >
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-heroGradient opacity-50" />
+      <div className="absolute inset-0 bg-heroGradient opacity-30" />
 
       {/* Logo watermark */}
       <div className="absolute inset-0 flex items-center justify-center opacity-5">
@@ -47,32 +41,21 @@ export function Page7Section() {
         </div>
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-6">
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-16"
-        >
-          Aqui você pode delegar...
-        </motion.h2>
-
+      <div className="container relative z-10 mx-auto max-w-6xl">
         {/* Qualquer documento jurídico Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12"
+          className="mb-16"
         >
-          <h3 className="text-2xl md:text-3xl font-semibold text-freelaw-purpleLight text-center mb-6">
+          <h3 className="text-2xl md:text-3xl font-semibold text-freelaw-purpleLight text-center mb-8">
             Qualquer documento jurídico
           </h3>
 
           {/* Scrolling documents - Left to Right */}
-          <div className="relative overflow-hidden py-4 border-y-2 border-freelaw-purpleLight/40 bg-white/5">
+          <div className="relative overflow-hidden py-6 border-y-2 border-freelaw-purpleLight/40 bg-white/5">
             <motion.div
               className="flex items-center gap-8 whitespace-nowrap"
               animate={{
@@ -105,12 +88,12 @@ export function Page7Section() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-2xl md:text-3xl font-semibold text-freelaw-purpleLight text-center mb-6">
+          <h3 className="text-2xl md:text-3xl font-semibold text-freelaw-purpleLight text-center mb-8">
             Diversas áreas do direito
           </h3>
 
           {/* Scrolling areas - Right to Left */}
-          <div className="relative overflow-hidden py-4 border-y-2 border-freelaw-purpleLight/40 bg-white/5">
+          <div className="relative overflow-hidden py-6 border-y-2 border-freelaw-purpleLight/40 bg-white/5">
             <motion.div
               className="flex items-center gap-8 whitespace-nowrap"
               animate={{
@@ -141,7 +124,6 @@ export function Page7Section() {
             </motion.div>
           </div>
         </motion.div>
-
       </div>
     </section>
   )

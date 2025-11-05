@@ -16,7 +16,6 @@ import { Page12Section } from "@/components/Page12Section"
 import { Page13Section } from "@/components/Page13Section"
 import { Page14Section } from "@/components/Page14Section"
 import { Page15Section } from "@/components/Page15Section"
-import { Page16Section } from "@/components/Page16Section"
 
 export default function DemoPage() {
   return (
@@ -37,7 +36,6 @@ export default function DemoPage() {
       <Page14Section />
       <Page15Section />
       <Page12Section />
-      <Page16Section />
     </div>
   )
 }

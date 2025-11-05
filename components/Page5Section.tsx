@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
 
 export function Page5Section() {
-  const [followers, setFollowers] = useState(1)
+  const [followers, setFollowers] = useState(1000)
   const counterRef = useRef(null)
   const isInView = useInView(counterRef, { once: true, amount: 0.5 })
 
@@ -14,8 +14,8 @@ export function Page5Section() {
 
     const duration = 3000 // 3 seconds
     const steps = 60
-    const increment = (100000 - 1) / steps
-    let current = 1
+    const increment = (1000000 - 1000) / steps
+    let current = 1000
     let step = 0
 
     const timer = setInterval(() => {
@@ -23,7 +23,7 @@ export function Page5Section() {
       current += increment
 
       if (step >= steps) {
-        setFollowers(100000)
+        setFollowers(1000000)
         clearInterval(timer)
       } else {
         setFollowers(Math.floor(current))
@@ -38,11 +38,11 @@ export function Page5Section() {
   }
 
   return (
-    <section id="page5" className="h-screen bg-freelaw-bg flex items-center justify-center relative overflow-hidden">
+    <section id="page5" className="min-h-screen bg-freelaw-bg flex items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-heroGradient opacity-50" />
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-6">
+      <div className="container relative z-10 mx-auto max-w-6xl">
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export function Page5Section() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-16 relative"
         >
-          Hoje, mesmo sendo bom tecnicamente..
+          Mas mesmo com <span className="relative inline-block">tudo</span> isso..
         </motion.h2>
 
         {/* Content Grid - Text Left, Image Right */}
@@ -113,7 +113,6 @@ export function Page5Section() {
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   )
